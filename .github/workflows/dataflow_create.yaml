@@ -5,7 +5,7 @@ on:
     paths:
       - 'src/**'
     branches:
-      - main
+      - master
 env:
   main_class: com.commercetools.LogIngestion
   output_table_spec: some
