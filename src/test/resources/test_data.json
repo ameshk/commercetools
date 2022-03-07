@@ -1,0 +1,31 @@
+{
+  "jsonPayload": {
+    "project_key": "my_project_1",
+    "body": {
+      "token": "my-fake-token",
+      "query": {
+        "term": {
+          "product.name": "generic-tshirt",
+          "product.category": "mens"
+        }
+      },
+      "from": 0,
+      "size": 20
+    },
+    "fields": {
+      "region": "EU",
+      "request_duration_seconds": 0.001234
+    },
+    "http_method": "GET",
+    "http_status": 200,
+    "http_uri": "http://my-domain.example.com/search",
+    "logger": "my.logger"
+  },
+  "labels": {
+    "container.googleapis.com/namespace_name": "my-namespace",
+    "container.googleapis.com/stream": "stderr"
+  },
+  "receiveTimestamp": "01-01-01T12:12:12.121221212Z",
+  "severity": "INFO",
+  "timestamp": "01-01-01T12:12:12.121221212Z"
+}
