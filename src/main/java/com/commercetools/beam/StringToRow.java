@@ -6,6 +6,10 @@ import org.joda.time.DateTime;
 import org.json.JSONObject;
 
 public class StringToRow extends DoFn<String, TableRow> {
+    /**
+     * Extract data from json string and construct TableRow
+     * @param context context
+     */
     @ProcessElement
     public void processElement(ProcessContext context) {
         String jsonString = context.element();
@@ -19,7 +23,13 @@ public class StringToRow extends DoFn<String, TableRow> {
         Long receivedTime = 0L;
         if (jsonString != null)
         {
-            JSONObject obj = new JSONObject(jsonString);
+            JSONObject obj = null;
+            try {
+                obj = new JSONObject(jsonString);
+            }
+            catch (Exception e) {
+                obj = null;
+            }
             url = getUrl(obj);
             region = getRegion(obj);
             method = getMethod(obj);

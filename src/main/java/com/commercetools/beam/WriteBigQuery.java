@@ -6,6 +6,11 @@ import org.apache.beam.sdk.values.PCollection;
 
 public class WriteBigQuery {
 
+    /**
+     * Write data to big query
+     * @param bqData data to write to bigquery
+     * @param options beam pipeline options for configuration
+     */
     public void write(PCollection<TableRow> bqData, Options options) {
 
         bqData.apply("Write to BQ",

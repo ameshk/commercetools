@@ -8,7 +8,9 @@ import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PCollectionTuple;
 import org.apache.beam.sdk.values.TupleTag;
 
-class LogDataProcessor extends PTransform<PCollection<PubsubMessage>, PCollectionTuple> {
+
+public class LogDataProcessor extends PTransform<PCollection<PubsubMessage>, PCollectionTuple> {
+
     private TupleTag<String> gcsTag;
     private TupleTag<TableRow> bqTag;
 
@@ -17,6 +19,11 @@ class LogDataProcessor extends PTransform<PCollection<PubsubMessage>, PCollectio
         this.bqTag = bqTag;
     }
 
+    /**
+     * Convert Pub/sub PCollection data to String type and TableRow type
+     * @param input Pub/sub PCollection
+     * @return PCollectionTuple
+     */
     @Override
     public PCollectionTuple expand(PCollection<PubsubMessage> input) {
         PCollection<String> stringCollection = input

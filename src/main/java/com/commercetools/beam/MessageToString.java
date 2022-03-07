@@ -6,6 +6,11 @@ import org.apache.beam.sdk.transforms.DoFn;
 import java.nio.charset.StandardCharsets;
 
 public class MessageToString extends DoFn<PubsubMessage, String> {
+
+    /**
+     * Convert Pub/sub data to String type data, remove new line character
+     * @param context context
+     */
     @ProcessElement
     public void processElement(ProcessContext context) {
         PubsubMessage message = context.element();
