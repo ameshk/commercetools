@@ -11,7 +11,7 @@ dataset_id = "web-log"
 friendly_name = "web-log-v"
 location = "EU"
 table_id = "logs"
-table_schema = ""
+table_schema = "[  {    "name": "url",    "type": "STRING",    "mode": "NULLABLE"  },  {    "name": "region",    "type": "STRING",    "mode": "NULLABLE"  },  {    "name": "method",    "type": "STRING",    "mode": "NULLABLE"  },  {    "name": "status",    "type": "INTEGER",    "mode": "NULLABLE"  },  {    "name": "log_type",    "type": "STRING",    "mode": "NULLABLE"  },  {    "name": "received_time",    "type": "BIGINT",    "mode": "NULLABLE"  }]"
 
 # log storage bucket name
 log_bucket_name = "log-bucket"
