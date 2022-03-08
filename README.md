@@ -1,7 +1,7 @@
 In order to solve the assignment, I have decided to use Apache Beam. Few reasons to use Beam are :
-Unified batch and streaming framework
-Dataflow service provided by GCP runs Beam at its core
-Runs on multiple runner [dataflow runner, spark runner, flink runner, direct runner]
+* Unified batch and streaming framework
+* Dataflow service provided by GCP runs Beam at its core
+* Runs on multiple runner [dataflow runner, spark runner, flink runner, direct runner]
 
 # Flow diagram #
 
