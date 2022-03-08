@@ -3,7 +3,8 @@ Unified batch and streaming framework
 Dataflow service provided by GCP runs Beam at its core
 Runs on multiple runner [dataflow runner, spark runner, flink runner, direct runner]
 
-Flow diagram looks like:
+Markup :  # Heading 1 #
+Flow diagram
 ![alt text](https://github.com/ameshk/commercetools/blob/master/flow_diagram.png?raw=true)
 
 The code is written using java. Some specification of application code:
