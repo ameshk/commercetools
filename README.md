@@ -17,9 +17,9 @@ The code is written using java. Some specification of application code:
 
 ## Infrastructure code ##
 GCP platform is used for this solution. At a high level we would require pub/sub, bigquery services. Terraform is the best way to spin up and maintain the environment
-* Terraform scripts resided in the __infra__ folder.
+* Terraform scripts reside in the __infra__ folder.
 * Terraform modules are created and placed in __infra/modules__ folder
-* Main terraform scripts resides in __infra/infrastructure/main.tf__ file, this file calls appropriate modules from infra/modules folder
+* Main terraform scripts reside in __infra/infrastructure/main.tf__ file, this file calls appropriate modules from infra/modules folder
 * GCS storage is used as backend for terraform
 
 ## CICD ##
