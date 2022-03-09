@@ -55,5 +55,6 @@ Certain KPI’s can be calculated like:
 * The analytics can be further enhanced by overlapping with some other data like point of sales, product, customer, user etc.
 
 __Question__ What are the limitations or drawbacks of your design?
+
 __Answer__ The dataflow job is a streaming job and will be up and running - this may cause higher costs. To counter this we can specify the min and max nodes. We can also do the job as a batch and run on fixed intervals. 
 
