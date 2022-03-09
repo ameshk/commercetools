@@ -38,7 +38,7 @@ For deployment purposes I have chosen github actions.
 * __.github/workflows/infra.yaml__ file will deploy the terraform and create services/resources in GCP. Terraform commands like init, plan and apply will be executed as part of this pipeline
 * __.github/workflows/dataflow_create.yaml__ will create a dataflow job. This file will run a maven deploy command that will trigger a dataflow pipeline.
 
-## Questions and answer ##
+## Question and answer ##
 
 __Question__ What kind of applications can you think of that could be made possible with your
 Design?
