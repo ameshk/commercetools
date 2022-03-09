@@ -10,6 +10,8 @@ In order to solve the assignment, I have decided to use Apache Beam. Few reasons
 * Dataflow will write the json data to a GCS location
 * Dataflow will also extract key attributes from the json and push it as rows to a Big query table
 * Further analytics can be done on the big query table
+* For infrastructure I have used terraform
+* For deployment and scheduling purpose I have used github actions.
 
 ## Flow diagram ##
 
