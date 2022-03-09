@@ -56,5 +56,5 @@ Certain KPI’s can be calculated like:
 
 __Question__ What are the limitations or drawbacks of your design?
 
-__Answer__ The dataflow job is a streaming job and will be up and running - this may cause higher costs. To counter this we can specify the min and max nodes. We can also do the job as a batch and run on fixed intervals. 
+__Answer__ The dataflow job is a streaming job and will be up and running - this may cause higher costs. To counter this we can specify the min and max nodes. We can also do the job as a batch and run on fixed intervals. Some code refactor would be necessary if we want to run it on Kubernetes, Dataproc or any other service on other cloud platform [Azure, AWS]
 
