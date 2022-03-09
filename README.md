@@ -37,3 +37,23 @@ For deployment purposes I have chosen github actions.
 * __.github/workflows__ contain yaml files that define the CICD pipeline
 * __.github/workflows/infra.yaml__ file will deploy the terraform and create services/resources in GCP. Terraform commands like init, plan and apply will be executed as part of this pipeline
 * __.github/workflows/dataflow_create.yaml__ will create a dataflow job. This file will run a maven deploy command that will trigger a dataflow pipeline.
+
+## Questions and answer ##
+
+__Question__ What kind of applications can you think of that could be made possible with your
+Design?
+
+__Answer__ 
+With this solution we can do some log analytics of our application.
+Certain KPI’s can be calculated like:
+* Rank the endpoints in descending order as per their usage in a given time frame - last day, week or month
+* Identify the failures and finding the root cause
+* Using this web access log we can predict the future volume of request based on past history data. Machine learning models like __ARIMA__ or __SARIMA__ can be used.
+* Average time spent by a user on a website - the token can be common for a session and the session time can be calculated
+* The chain of redirect done by the user or the way user navigates through the webpage and click on different links on webpage
+* Analysis of the user activity how they convert into sales - User funnel flow ie. number user on landing page, number of user in checkout page and in payment page.
+* The analytics can be further enhanced by overlapping with some other data like point of sales, product, customer, user etc.
+
+__Question__ What are the limitations or drawbacks of your design?
+__Answer__ The dataflow job is a streaming job and will be up and running - this may cause higher costs. To counter this we can specify the min and max nodes. We can also do the job as a batch and run on fixed intervals. 
+
