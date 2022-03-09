@@ -8,8 +8,8 @@ In order to solve the assignment, I have decided to use Apache Beam. Few reasons
 * This data will be pushed to pub/sub topic by webserver
 * A dataflow job will be running on GCP, this job will receive stream of pub/sub messages
 * Dataflow will write the json data to a GCS location
-* Dataflow will also extract key attributes from the json and push it as rows to a Big query table
-* Further analytics can be done on the big query table
+* Dataflow will also extract key attributes from the json and push it as rows to a Big Query table
+* Further analytics can be done on the Big Query table
 * For infrastructure I have used terraform
 * For deployment and scheduling purpose I have used github actions.
 
@@ -21,7 +21,7 @@ In order to solve the assignment, I have decided to use Apache Beam. Few reasons
 The code is written using java. Some specification of application code:
 * Codebase is a maven project and has a pom.xml file in root folder
 * Main code resides in __src/main/java__. A lot of effort is put into testing this code, the test cases reside in __src/test/java__
-* Summary of code flow is - stream of json log data will be received in pubsub topic, read this stream using beam, extract key attributes from this data, store these attributes in big query and store the json logs in GCS.
+* Summary of code flow is - stream of json log data will be received in pubsub topic, read this stream using beam, extract key attributes from this data, store these attributes in Big Query and store the json logs in GCS.
 * Main class : __com.commercetools.LogIngestion__
 * Detailed comments are added  in the code and the functionality is separated among .java files for better understanding
 
