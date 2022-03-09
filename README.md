@@ -3,6 +3,14 @@ In order to solve the assignment, I have decided to use Apache Beam. Few reasons
 * Dataflow service provided by GCP runs Beam at its core
 * Runs on multiple runner [dataflow runner, spark runner, flink runner, direct runner]
 
+## Solution ##
+* Webserver will generate log data in json format.
+* This data will be pushed to pub/sub topic by webserver
+* A dataflow job will be running on GCP, this job will receive stream of pub/sub messages
+* Dataflow will write the json data to a GCS location
+* Dataflow will also extract key attributes from the json and push it as rows to a Big query table
+* Further analytics can be done on the big query table
+
 ## Flow diagram ##
 
 ![alt text](https://github.com/ameshk/commercetools/blob/master/flow_diagram.png?raw=true)
